@@ -6,15 +6,21 @@ class SlideNav extends React.Component {
   constructor() {
     super();
     this.state = {
-      tab1: 'something',
-      tab2: 'something'
+      clicked:false
     }
+  }
+  onChildChanged(newState){
+    this.setState({clicked:newState});
+  //  console.log(this.state.clicked);
+    this.props.CallbackParent(newState);
   }
     render(){
             return(
                 <Tabs className='tab-demo z-depth-1'>
         		<Tab title="Image Set 1" active>
-              <Image />
+              <Image
+                CallbackParent={(newState)=>this.onChildChanged(newState)}
+              />
             </Tab>
         		<Tab title="Image Set 2">
 

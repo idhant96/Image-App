@@ -3,12 +3,17 @@ import cristiano from './cristiano.jpg';
 // import coldplay from './img/coldplay.jpg';
 // import spark from './img/spark.jpg';
 class Image extends React.Component{
-constructor(props){
-  super(props);
+constructor(){
+  super();
   this.state = {
-    data: "nothing",
+    clicked: false
   }
-
+}
+onClicked(){
+  const newState = !this.state.clicked;
+  this.setState({clicked:newState});
+  // console.log(this.state.clicked)
+  this.props.CallbackParent(newState);
 }
 render(){
   return(
@@ -17,6 +22,7 @@ render(){
       alt="Smiley face"
        height="300"
        width="500"
+       onClick={()=>this.onClicked()}
      />
    </div>
   )

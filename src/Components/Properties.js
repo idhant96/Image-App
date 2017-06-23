@@ -1,14 +1,20 @@
 import React from 'react';
 
 class Info extends React.Component{
-  constructor() {
+  constructor({ status }) {
     super();
     this.state = {
-
+      data: status
     }
+
   }
     render(){
-      return
+      return(
+        <div>
+          <p>The image is clicked?  {this.state.data}</p>
+        </div>
+
+      )
     }
   }
 
