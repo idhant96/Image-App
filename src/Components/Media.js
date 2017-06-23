@@ -1,8 +1,7 @@
-import {MediaBox} from 'react-materialize';
 import React from 'react';
 import cristiano from './cristiano.jpg';
-import coldplay from './coldplay.jpg';
-import spark from './spark.jpg';
+// import coldplay from './img/coldplay.jpg';
+// import spark from './img/spark.jpg';
 class Image extends React.Component{
 constructor(props){
   super(props);
@@ -14,11 +13,10 @@ constructor(props){
 render(){
   return(
     <div>
-    <img src={coldplay}
+    <img src={cristiano}
       alt="Smiley face"
        height="300"
        width="500"
-       onClick={props.onCLick}
      />
    </div>
   )
