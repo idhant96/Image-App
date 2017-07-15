@@ -1,21 +1,23 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import 'materialize-css'; // It installs the JS asset only
+import 'materialize-css/dist/css/materialize.min.css';
 
-class Info extends React.Component{
-  constructor({ status }) {
-    super();
-    this.state = {
-      data: status
-    }
+class CardInfo extends React.Component {
+render(){
+  return(
+    <div className="row">
+  <div className="col s12 m5">
+    <div className="card-panel teal">
+      <div className="white-text">
+        <p> somthing some something</p>
+        <p>some soe</p>
+    </div>
+    </div>
+  </div>
+</div>
+  );
+}
+}
 
-  }
-    render(){
-      return(
-        <div>
-          <p>The image is clicked?  {this.state.data}</p>
-        </div>
-
-      )
-    }
-  }
-
-  export default Info;
+export default CardInfo;
