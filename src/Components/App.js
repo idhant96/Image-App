@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavHeader from './NavHeader';
+import Layout from './Layout';
 
 
 class App extends React.Component {
   render() {
     return (
       <div>
-            <NavHeader />
+            <Layout />
 </div>
 
     );
