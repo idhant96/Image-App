@@ -1,20 +1,26 @@
 import React from 'react';
-import cristiano from '../img/cristiano.jpg';
-// import coldplay from './img/coldplay.jpg';
-// import spark from './img/spark.jpg';
+import Picture from './Picture';
 class Image extends React.Component{
+
+  iterateImages(){
+  return this.props.cards.map((image) => {
+    return(
+      <img
+        key={image.id}
+        src={image.source}
+        alt="not working bro!"
+        height="200"
+        width="200"
+      />
+    )
+  })
+}
 render(){
   return(
-        <div className="col s3">
-        <div classsName="card small">
-          <div classsName="card-image">
-            <img className="materialboxed" src={cristiano} height="200" width="200"/>
-          </div>
-        </div>
-      </div>
+    <div>
+      {this.iterateImages()}
+</div>
   )
-
-
 }
 }
 
